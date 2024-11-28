@@ -13,4 +13,9 @@ export class CharactersService {
   getPersonajes(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
+  getPersonajeById(id: number): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<any>(url);
+  }
+
 }

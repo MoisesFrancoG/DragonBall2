@@ -9,8 +9,7 @@
         <p><strong>MaxKi:</strong> {{ personaje.maxKi }}</p>
         <p>{{ personaje.description }}</p>
         <button [routerLink]="['/transformaciones']">Transformaciones</button>
-        <button [routerLink]="['/planetas']">Origen</button>
+        <button [routerLink]="['/planetas', personaje.id]">Origen</button>
       </div>
     </div>
   </div>
-  
