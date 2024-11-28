@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.planet-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.planet-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.planet-image {
+  width: 50%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.planet-info {
+  text-align: left;
+  flex: 1;
+}
+
+.planet-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.destruido {
+  color: red;
+  font-weight: bold;
+}
+
+
+.planet-card, .planet-image, .planet-info h3 {
+  transition: all 0.3s ease;
+}
+
+.planet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #6d6d6d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.back-button:hover {
+  background-color: #6d8eb0;
+}
+
+.container {
+  position: relative; 
+}
