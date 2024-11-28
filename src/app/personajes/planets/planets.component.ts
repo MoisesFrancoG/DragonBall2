@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CharactersService } from '../../services/characters.service';
-import { Character } from '../models/character';
-import { Planet } from '../models/planets';
+import { Character } from '../../models/character';
+import { Planet } from '../../models/planets';
 import { Location } from '@angular/common';
 
 @Component({

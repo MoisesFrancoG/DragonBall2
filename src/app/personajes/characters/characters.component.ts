@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from '../models/character';
+import { Character } from '../../models/character';
 import { CharactersService } from '../../services/characters.service';
 @Component({
   selector: 'app-characters',
@@ -13,7 +13,7 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit(): void {
     this.charSer.getPersonajes().subscribe((response) => {
-      this.personajes = response.items
+      this.personajes = response.items;
       console.log(this.personajes);
     });
   }
