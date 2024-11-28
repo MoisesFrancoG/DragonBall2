@@ -1,0 +1,40 @@
+<div *ngIf="personaje">
+    <h1>{{ personaje.name }} - Transformaciones</h1>
+    <p *ngIf="!transformaciones || transformaciones.length === 0">
+      {{ mensaje }}
+    </p>
+    <div
+      *ngFor="let transformacion of transformaciones"
+      class="transformacion"
+    >
+      <h3>{{ transformacion.name }}</h3>
+      <img [src]="transformacion.image" alt="{{ transformacion.name }}" />
+      <p><strong>Ki:</strong> {{ transformacion.ki }}</p>
+      <button (click)="abrirModal(transformacion)">Modificar Ki</button>
+    </div>
+  </div>
+  
+<div *ngIf="transformacionSeleccionada" class="modal">
+    <div class="modal-content">
+      <h2>{{ transformacionSeleccionada.name }}</h2>
+      <img 
+        *ngIf="transformacionSeleccionada.image" 
+        [src]="transformacionSeleccionada.image" 
+        alt="Imagen de {{ transformacionSeleccionada.name }}" 
+        class="modal-image"
+      />
+        <p>{{transformacionSeleccionada.name}}</p>
+      <label for="ki">Nuevo Ki:</label>
+      <input 
+        id="ki" 
+        type="number" 
+        [(ngModel)]="nuevoKi" 
+      />
+        <div id="butons">
+            <button (click)="guardarCambios()">Guardar</button>
+            <button (click)="cerrarModal()">Cancelar</button>
+        </div>
+    </div>
+  </div>
+  
+  

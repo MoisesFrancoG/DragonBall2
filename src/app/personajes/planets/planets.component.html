@@ -1,0 +1,23 @@
+<div *ngIf="personaje" class="container">
+  <button class="back-button" (click)="goBack()">
+    ⬅ Volver a personajes
+  </button>
+  <div *ngIf="planeta; else noPlanet" class="planet-card">
+    <h2 class="title">🌍 Planeta de Origen</h2>
+    <div class="planet-details">
+      <img class="planet-image" [src]="planeta.image" alt="{{ planeta.name }}" />
+      <div class="planet-info">
+        <h3>{{ planeta.name }}</h3>
+        <p><strong>Descripción:</strong> {{ planeta.description }}</p>
+        <p>
+          <strong>Destruido: </strong>
+          <span [class.destruido]="planeta.isDestroyed">{{ planeta.isDestroyed ? 'Sí' : 'No' }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noPlanet>
+    <p class="no-planet">Este personaje no tiene un planeta de origen registrado.</p>
+  </ng-template>
+</div>
