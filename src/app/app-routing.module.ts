@@ -6,8 +6,8 @@ import { PlanetsComponent } from './personajes/planets/planets.component';
 
 const routes: Routes = [
   {path: '', component: CharactersComponent},
+  { path: 'planetas/:id', component: PlanetsComponent },
   {path: 'transformaciones/:id', component: TransformationsComponent},
-  {path: 'planetas', component: PlanetsComponent}
 ];
 
 @NgModule({

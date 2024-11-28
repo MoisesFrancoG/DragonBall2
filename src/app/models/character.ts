@@ -8,5 +8,5 @@ id: number,
   description: string,
   image: string,
   affiliation: string,
-  deletedAt: null
+  deletedAt: null,
 }

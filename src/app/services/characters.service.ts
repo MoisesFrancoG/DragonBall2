@@ -13,8 +13,9 @@ export class CharactersService {
   getPersonajes(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
-
-  getTrans(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  getPersonajeById(id: number): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<any>(url);
   }
+
 }

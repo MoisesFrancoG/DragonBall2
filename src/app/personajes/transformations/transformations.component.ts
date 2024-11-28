@@ -23,7 +23,7 @@ export class TransformationsComponent implements OnInit {
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.charService.getTrans(id).subscribe(
+    this.charService.getPersonajeById(id).subscribe(
       (response) => {
         this.personaje = response;
         if (this.personaje) {
